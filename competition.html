@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competition - Delhi Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🏆 Tic Tac Toe Competition</h1>
+    <nav>
+      <a href="index.html">Game</a>
+      <a href="competition.html">Competition</a>
+      <a href="otp.html">Join Us</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div id="login-section">
+      <h2>Enter for Competition</h2>
+      <form id="login-form" onsubmit="event.preventDefault(); handleLogin();">
+        <input type="text" id="username" placeholder="Your username" required maxlength="20">
+        <button type="submit">Join Competition</button>
+      </form>
+    </div>
+
+    <div id="competition-game" style="display: none;">
+      <div id="status" class="status"></div>
+      
+      <div id="game-board">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+
+      <button onclick="restartGame()">New Game</button>
+
+      <h3>Leaderboard (Top 10)</h3>
+      <table id="rankings">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
